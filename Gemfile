@@ -32,3 +32,5 @@ end
 
 # SimpleCov is a code coverage analysis tool for Ruby
 gem 'simplecov', require: false, group: :test
+
+gem 'thin'

@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+.control-label {
+  margin-top:5px;
+}
+
+.form-group {
+  padding-bottom: 30px
+}
+
+#footer {
+  text-align: center;
+  background-color: #f9f9f9;
+  min-height: 30px;
+  padding: 10px;
+  color: #777777;
+}
+
+#footer .container p {
+  margin:0;
+}
+
+.page-header {
+  margin:20px 0 20px;
+}
+
+table th {
+  text-align:center;
+}

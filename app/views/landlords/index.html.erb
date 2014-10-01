@@ -1,3 +1,27 @@
-<%= @landlords.map(&:email) %>
+<div class="page-header text-center">
+  <h1>Landlords</h1>
+</div>
+<div>
+  <table class="table table-striped table-hover table-bordered text-center">
+    <tr class="success">
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Postcode</th>
+      <th>Current Rent</th>
+      <th>Yearly Yield</th>
+      <th>Property Price</th>
+    </tr>
+    <% @landlords.each do |landlord| %>
+      <tr>
+        <td><%= landlord.email %></td>
+        <td><%= landlord.phone_number %></td>
+        <td><%= landlord.postcode %></td>
+        <td><%= number_to_currency(landlord.current_rent, unit: "£") %></td>
+        <td><%= number_to_currency((landlord.current_rent * 12), unit: "£") %></td>
+        <td><%= number_to_currency(landlord.property_price, unit: "£") %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 
-<%= link_to "New", new_landlord_path %>
+<%= link_to "New landlord", new_landlord_path,class:"btn btn-success new-button" %>
