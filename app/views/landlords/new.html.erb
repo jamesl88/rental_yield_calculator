@@ -1,0 +1,30 @@
+<%= form_for @landlord, method: :post do |f| %>
+  <p>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </p>
+
+  <p>
+    <%= f.label :postcode %><br>
+    <%= f.text_field :postcode %>
+  </p>
+
+  <p>
+    <%= f.label :current_rent %><br>
+    <%= f.text_field :current_rent %>
+  </p>
+
+  <p>
+    <%= f.label :property_price %><br>
+    <%= f.text_field :property_price %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
