@@ -17,9 +17,16 @@ describe LandlordsController do
     end
   end # END GET index
 
+  describe "GET edit" do
+    it "renders the edit template" do
+      get :edit, id: post_saved_landlord
+      expect(response).to render_template("edit")
+    end
+  end # END GET edit
+
   describe "POST create" do
 
-    context "successful" do
+    context "Successful" do
       before { post :create, landlord: pre_saved_landlord.attributes }
 
       it { should respond_with 302 }
@@ -33,11 +40,11 @@ describe LandlordsController do
       end
     end
 
-    context "failed" do
+    context "Failed" do
       before { post :create, landlord: post_saved_landlord.attributes }
 
       it { should redirect_to landlords_path }
-      it { should set_the_flash[:alert].to("Landlord not saved.") }
+      it { should set_the_flash[:alert].to("Email has already been taken and Phone number has already been taken") }
 
       it "does not create a new landlord record" do
         expect{ post :create, landlord: post_saved_landlord.attributes }.
@@ -53,5 +60,34 @@ describe LandlordsController do
       expect(response).to render_template("new")
     end
   end # END GET new
+
+  describe "PUT update" do 
+    context "Successful" do 
+      before { 
+        put :update, 
+        id: post_saved_landlord.id, 
+        landlord: post_saved_landlord.attributes = { email: "new-email@example.com" } 
+      }
+
+      it { should respond_with 302 }
+      it { should set_the_flash[:notice].to("Landlord has been updated.") }
+      it { should redirect_to landlords_path }
+
+    end
+
+    context "Failed" do 
+      before { 
+        @new_landlord = FactoryGirl.create :landlord
+        put :update, 
+        id: @new_landlord, 
+        landlord: post_saved_landlord.attributes = { email: post_saved_landlord.email } 
+      }
+
+      it { should respond_with 302 }
+      it { should set_the_flash[:alert].to("Email has already been taken") }
+      it { should redirect_to landlords_path }
+    end
+  end # END PUT update
+
 
 end

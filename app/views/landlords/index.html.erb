@@ -10,6 +10,7 @@
       <th>Current Rent</th>
       <th>Yearly Yield</th>
       <th>Property Price</th>
+      <th>Edit</th>
     </tr>
     <% @landlords.each do |landlord| %>
       <tr>
@@ -19,6 +20,7 @@
         <td><%= number_to_currency(landlord.current_rent, unit: "£") %></td>
         <td><%= number_to_currency((landlord.current_rent * 12), unit: "£") %></td>
         <td><%= number_to_currency(landlord.property_price, unit: "£") %></td>
+        <td><%= link_to "Edit", edit_landlord_path(landlord), class:"btn btn-default" %></td>
       </tr>
     <% end %>
   </table>
