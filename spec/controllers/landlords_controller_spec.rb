@@ -30,7 +30,7 @@ describe LandlordsController do
       before { post :create, landlord: pre_saved_landlord.attributes }
 
       it { should respond_with 302 }
-      it { should permit(:email, :phone_number, :postcode, :current_rent, :property_price).for(:create) }
+      it { should permit(:email, :phone_number, :postcode, :current_rent, :property_price, :yearly_yield, :net_yield, :maintenance_expenses).for(:create) }
       it { should set_the_flash[:notice].to("New Landlord has been added.") }
       it { should redirect_to landlords_path }
 

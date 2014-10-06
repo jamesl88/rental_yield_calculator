@@ -7,6 +7,7 @@ describe Landlord do
     it { should have_db_column(:postcode).of_type(:string) }
     it { should have_db_column(:current_rent).of_type(:integer) }
     it { should have_db_column(:property_price).of_type(:integer) }
+    it { should have_db_column(:yearly_yield).of_type(:integer) }
 
   end # END SCHEMA DESCRIPTION
 

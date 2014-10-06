@@ -26,7 +26,7 @@ class LandlordsController < ApplicationController
   private
 
     def landlord_params
-      params.require(:landlord).permit(:email, :phone_number, :postcode, :current_rent, :property_price)
+      params.require(:landlord).permit(:email, :phone_number, :postcode, :current_rent, :property_price, :yearly_yield, :net_yield, :maintenance_expenses)
     end
 
     def landlord_updated

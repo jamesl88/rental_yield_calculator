@@ -4,7 +4,7 @@
 <div class="col-md-6 col-md-offset-3">
   <div class="panel panel-success">
     <div class="panel-heading">
-      <h3 class="panel-title">Edit Landlord</h3>
+      <h3 class="panel-title text-center">Edit Landlord</h3>
     </div>
     <div class="panel-body">
       <%= form_for @landlord, method: :put do |f| %>
@@ -33,14 +33,50 @@
           <div class="form-group">
             <%= f.label "Current Rent", class: "col-md-4 control-label"  %>
             <div class="col-md-8">
-              <%= f.number_field :current_rent, required: true, placeholder: "1000",  class: "form-control" %>
+              <div class="input-group">
+                <span class="input-group-addon">£</span>
+                <%= f.number_field :current_rent, required: true, placeholder: "1000",  class: "form-control" %>
+              </div>
+            </div>
+          </div>          
+
+          <div class="form-group">
+            <%= f.label "Maintenance", class: "col-md-4 control-label"  %>
+            <div class="col-md-8">
+              <div class="input-group">
+                <span class="input-group-addon">£</span>
+                <%= f.number_field :maintenance_expenses, value:"0", placeholder: "e.g. Service charge",  class: "form-control" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "Yearly Yield", class: "col-md-4 control-label"  %>
+            <div class="col-md-8">
+              <div class="input-group">
+                <span class="input-group-addon">£</span>
+                <%= f.number_field :yearly_yield, readonly:true, class: "form-control" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "Net Yield", class: "col-md-4 control-label"  %>
+            <div class="col-md-8">
+              <div class="input-group">
+                <span class="input-group-addon">£</span>
+                <%= f.number_field :net_yield, value: "#landlord_yearly_yield", readonly:true, class: "form-control" %>
+              </div>
             </div>
           </div>
 
           <div class="form-group">
             <%= f.label :property_price, class: "col-md-4 control-label"  %>
             <div class="col-md-8">
-              <%= f.number_field :property_price, required: true, placeholder: "200000",  class: "form-control" %>
+              <div class="input-group">
+                <span class="input-group-addon">£</span>
+                <%= f.number_field :property_price, required: true, placeholder: "200000",  class: "form-control" %>
+              </div>
             </div>
           </div>
 
