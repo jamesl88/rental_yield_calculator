@@ -5,6 +5,8 @@
         1,
         null,
         1,
+        null,
+        1,
         2,
         null,
         null,
@@ -45,6 +47,14 @@
         6,
         null,
         null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
         null
       ],
       "/Users/jameslieu/Desktop/Developer/technical_tests/rental_yield_calculator/app/controllers/application_controller.rb": [
@@ -61,6 +71,6 @@
         null
       ]
     },
-    "timestamp": 1412636276
+    "timestamp": 1412637840
   }
 }

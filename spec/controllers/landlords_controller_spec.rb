@@ -8,7 +8,7 @@ describe LandlordsController do
   describe "GET index" do
     it "assigns @landlords" do
       get :index
-      expect(assigns(:landlords)).to eq Landlord.all
+      expect(assigns(:landlords)).to eq [post_saved_landlord]
     end
 
     it "renders the index template" do
