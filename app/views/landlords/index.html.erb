@@ -4,15 +4,15 @@
 <div>
   <table class="table table-striped table-hover table-bordered text-center">
     <tr class="success">
-      <th>Email</th>
-      <th>Phone Number</th>
-      <th>Postcode</th>
-      <th>Current Rent</th>
-      <th>Maintenance</th>
-      <th>Yearly Yield</th>
-      <th>Net Yield</th>
-      <th>Property Price</th>
-      <th>Edit</th>
+      <th><%= sortable "email" %></th>
+      <th><%= sortable "phone_number" %></th>
+      <th><%= sortable "postcode" %></th>
+      <th><%= sortable "current_rent" %></th>
+      <th><%= sortable "maintenance_expenses", "Maintenace" %></th>
+      <th><%= sortable "yearly_yield" %></th>
+      <th><%= sortable "net_yield" %></th>
+      <th><%= sortable "property_price" %></th>
+      <th></th>
     </tr>
     <% @landlords.each do |landlord| %>
       <tr>

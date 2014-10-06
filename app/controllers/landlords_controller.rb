@@ -1,7 +1,9 @@
 class LandlordsController < ApplicationController
 
+  helper_method :sort_column, :sort_direction
+
   def index
-    @landlords = Landlord.all
+    @landlords = Landlord.order(sort_column + " " + sort_direction)
   end
 
   def edit
@@ -39,6 +41,14 @@ class LandlordsController < ApplicationController
 
     def landlord_saved
       redirect_to landlords_path, notice: "New Landlord has been added."
+    end
+
+    def sort_column
+      Landlord.column_names.include?(params[:sort]) ? params[:sort] : "email"         
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"      
     end
 
 end
