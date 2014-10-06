@@ -38,6 +38,11 @@ body {
   margin:0;
 }
 
+#home-link {
+  color:#777;
+  text-decoration: none;
+}
+
 .page-header {
   margin:20px 0 20px;
 }

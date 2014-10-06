@@ -35,5 +35,5 @@
   <%= link_to "New landlord", new_landlord_path,class:"btn btn-success new-button" %>
 </div>
 <div class="col-md-6 col-md-offset-3 text-center">
-  <%= will_paginate @landlords %>
+  <%= will_paginate @landlords, renderer: BootstrapPagination::Rails %>
 </div>

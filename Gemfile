@@ -23,6 +23,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # will_paginate is a pagination library
 gem 'will_paginate', '~> 3.0.5'
+gem 'will_paginate-bootstrap'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
