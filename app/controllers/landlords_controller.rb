@@ -3,7 +3,7 @@ class LandlordsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    @landlords = Landlord.order(sort_column + " " + sort_direction).paginate(per_page: 6, page: params[:page])
+    @landlords = Landlord.order(sort_column + " " + sort_direction).paginate(per_page: 10, page: params[:page])
   end
 
   def edit
