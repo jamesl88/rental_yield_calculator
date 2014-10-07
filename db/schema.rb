@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20141006215614) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "yearly_yield"
-    t.integer  "maintenance"
     t.integer  "net_yield"
     t.integer  "maintenance_expenses"
   end
