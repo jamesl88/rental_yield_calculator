@@ -13,6 +13,8 @@ $ rake db:migrate
 
 # Optional preload some example records 
 $ rake db:seed
+
+$ rails s
 ```
 
 ##### Run Tests
