@@ -1,5 +1,7 @@
 # Rental Yield Calculator
 
+http://rental-yield-24601.herokuapp.com
+
 A simple rental yield calculator so that landlords can work out the yearly yield from renting a property.
 
 <center>
