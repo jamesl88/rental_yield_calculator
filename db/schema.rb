@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20141006215614) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "landlords", force: true do |t|
     t.string   "email"
     t.string   "phone_number"
