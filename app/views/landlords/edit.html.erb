@@ -12,21 +12,21 @@
           <div class="form-group">
             <%= f.label :email, class: "col-md-4 control-label" %>
             <div class="col-md-8">
-              <%= f.email_field :email, required: true, placeholder: "test@example.com", class: "form-control" %>
+              <%= f.email_field :email, required: true, placeholder: "test@example.com", class: "form-control", data: { toggle: 'tooltip', title: "Please enter your email" } %>
             </div>
           </div>
 
           <div class="form-group">
             <%= f.label :phone_number, class: "col-md-4 control-label" %>
             <div class="col-md-8">
-              <%= f.number_field :phone_number, required: true, placeholder: "079xxxxxxxxx", class: "form-control" %>
+              <%= f.number_field :phone_number, required: true, placeholder: "079xxxxxxxxx", class: "form-control", data: { toggle: 'tooltip', title: "Please enter your phone number" } %>
             </div>
           </div>
 
           <div class="form-group">
             <%= f.label :postcode, class: "col-md-4 control-label"  %>
             <div class="col-md-8">
-              <%= f.text_field :postcode, required: true,  placeholder: "NW1 1ER", class: "form-control" %>
+              <%= f.text_field :postcode, required: true,  placeholder: "NW1 1ER", class: "form-control", data: { toggle: 'tooltip', title: "Please enter your postcode" } %>
             </div>
           </div>
 
@@ -35,17 +35,17 @@
             <div class="col-md-8">
               <div class="input-group">
                 <span class="input-group-addon">£</span>
-                <%= f.number_field :current_rent, required: true, placeholder: "1000",  class: "form-control" %>
+                <%= f.number_field :current_rent, required: true, placeholder: "1000",  class: "form-control" , data: { toggle: 'tooltip', title: "Please enter the current monthly rent" } %>
               </div>
             </div>
-          </div>          
+          </div>
 
           <div class="form-group">
             <%= f.label "Maintenance", class: "col-md-4 control-label"  %>
             <div class="col-md-8">
               <div class="input-group">
                 <span class="input-group-addon">£</span>
-                <%= f.number_field :maintenance_expenses, value:"0", placeholder: "e.g. Service charge",  class: "form-control" %>
+                <%= f.number_field :maintenance_expenses, value:"0", placeholder: "e.g. Service charge",  class: "form-control", data: { toggle: 'tooltip', title: "Please enter the yearly maintenace costs. e.g Servce charge" } %>
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@
             <div class="col-md-8">
               <div class="input-group">
                 <span class="input-group-addon">£</span>
-                <%= f.number_field :yearly_yield, readonly:true, class: "form-control" %>
+                <%= f.number_field :yearly_yield, readonly:true, class: "form-control", data: { toggle: 'tooltip', title: "This is the yearly yield based on the monthly rent" } %>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
             <div class="col-md-8">
               <div class="input-group">
                 <span class="input-group-addon">£</span>
-                <%= f.number_field :net_yield, value: "#landlord_yearly_yield", readonly:true, class: "form-control" %>
+                <%= f.number_field :net_yield, value: "#landlord_yearly_yield", readonly:true, class: "form-control", data: { toggle: 'tooltip', title: "Rate of return on an investment after subtracting all expenses" } %>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@
             <div class="col-md-8">
               <div class="input-group">
                 <span class="input-group-addon">£</span>
-                <%= f.number_field :property_price, required: true, placeholder: "200000",  class: "form-control" %>
+                <%= f.number_field :property_price, required: true, placeholder: "200000",  class: "form-control", data: { toggle: 'tooltip', title: "The property price" } %>
               </div>
             </div>
           </div>
