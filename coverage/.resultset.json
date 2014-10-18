@@ -1,7 +1,42 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jameslieu/Desktop/Developer/technical_tests/rental_yield_calculator/app/controllers/landlords_controller.rb": [
+      "/Users/jameslieu/Desktop/code/technical_tests/rental_yield_calculator/db/schema.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/jameslieu/Desktop/code/technical_tests/rental_yield_calculator/app/controllers/landlords_controller.rb": [
         1,
         null,
         1,
@@ -57,20 +92,20 @@
         null,
         null
       ],
-      "/Users/jameslieu/Desktop/Developer/technical_tests/rental_yield_calculator/app/controllers/application_controller.rb": [
+      "/Users/jameslieu/Desktop/code/technical_tests/rental_yield_calculator/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/jameslieu/Desktop/Developer/technical_tests/rental_yield_calculator/app/models/landlord.rb": [
+      "/Users/jameslieu/Desktop/code/technical_tests/rental_yield_calculator/app/models/landlord.rb": [
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1412640336
+    "timestamp": 1413591154
   }
 }
