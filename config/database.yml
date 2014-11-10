@@ -1,15 +1,17 @@
 development:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: rental_yield_calculator_development
   pool: 5
   username: jlieu
-  password:
+  password: <%= ENV["MY_PASSWORD"] %>
 
 test:
   adapter: postgresql
   encoding: unicode
   database: rental_yield_calculator_test
+  host: localhost
   pool: 5
   username: jlieu
-  password:
+  password: <%= ENV["MY_PASSWORD"] %>
